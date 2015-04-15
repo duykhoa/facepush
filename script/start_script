@@ -1,0 +1,12 @@
+# START SCRIPT
+# in .zshrc, you can add an alias, like ``facepush`` and this do cd $PWD && ./start_script
+
+# /bin/bash
+
+# start services - TODO
+
+PWD = $(pwd)$
+
+cd $PWD && cd .. && rubocop --format html -o rubocop.html
+open $PWD/rubocop.html
+mux facepush
