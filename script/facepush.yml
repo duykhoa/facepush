@@ -1,0 +1,9 @@
+# ~/.tmuxinator/facepush.yml
+
+name: facepush
+root: ~/Working/facepush
+
+windows:
+  - editor: vi
+  - server: rubocop --format html > rubocop.html && spring rspec
+  - console: git status && git pull
