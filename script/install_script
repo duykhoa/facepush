@@ -7,8 +7,8 @@ then
   ln -s $PWD/facepush.yml ~/.tmuxinator/facepush.yml
 fi
 
-if [ ! -f ../.git/hooks/pre-push ]
-then
-  ln -s $PWD/pre-push ../.git/hooks/pre-push
-fi
+#if [ ! -f ../.git/hooks/pre-push ]
+#then
+  #ln -s $PWD/pre-push ../.git/hooks/pre-push
+#fi
 
