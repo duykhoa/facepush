@@ -10,6 +10,7 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 
 gem 'omniauth-facebook'
+gem 'fb_graph'
 
 group :development, :test do
   gem 'byebug'
