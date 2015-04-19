@@ -6,21 +6,20 @@ class User < ActiveRecord::Base
 
   class << self
     def find_by_facebook_omniauth(omniauth_params)
-      find_by_uid(omniauth_params[:uid]) || create(user_params)
+      find_by_uid(omniauth_params[:uid]) || create(user_params(omniauth_params))
     end
 
     private
 
     def user_params(params)
-      byebug
-
       {
-        token: params.credentials.token,
-        token_expired_at: params.credentials.expires_at,
+        omniauth_token: params.credentials.token,
+        omniauth_token_expired_at: params.credentials.expires_at,
         email: params.info.email,
         name: params.info.name,
         uid: params.uid,
-        provider: params.provider
+        provider: params.provider,
+        password: SecureRandom.hex(20)
       }
     end
   end

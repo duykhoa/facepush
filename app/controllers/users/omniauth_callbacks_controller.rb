@@ -3,8 +3,8 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
     #render json: { login: :success, auth: request.env["omniauth.auth"] }
     user = User.find_by_facebook_omniauth(omniauth_params)
 
-    render json: { login: :success, auth: request.env["omniauth.auth"] }
-    #sign_in user
+    # render json: { login: :success, auth: request.env["omniauth.auth"] }
+    sign_in user
   end
 
   private
