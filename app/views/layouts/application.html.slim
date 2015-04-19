@@ -14,3 +14,5 @@ html
     main[role="main"]
       == render 'layouts/messages'
       == yield
+
+      = link_to "Sign in with facebook", user_omniauth_authorize_path(:facebook)
