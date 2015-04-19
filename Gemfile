@@ -8,22 +8,28 @@ gem 'coffee-rails', '~> 4.1.0'
 gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
+
+gem 'omniauth-facebook'
+
 group :development, :test do
   gem 'byebug'
   gem 'web-console', '~> 2.0'
   gem 'spring'
 end
+
 gem 'bootstrap-sass'
 gem 'devise'
 gem 'figaro', '>= 1.0.0.rc1'
 gem 'simple_form'
 gem 'slim-rails'
+
 group :development do
   gem 'hub', :require=>nil
   gem 'quiet_assets'
   gem 'rails_layout'
   gem 'spring-commands-rspec'
 end
+
 group :development, :test do
   gem 'factory_girl_rails'
   gem 'faker'
