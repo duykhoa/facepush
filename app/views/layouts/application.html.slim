@@ -15,4 +15,7 @@ html
       == render 'layouts/messages'
       == yield
 
-      = link_to "Sign in with facebook", user_omniauth_authorize_path(:facebook)
+      - if user_signed_in?
+        | Welcome #{current_user.name}!
+      - else
+        = link_to "Sign in with facebook", user_omniauth_authorize_path(:facebook)
